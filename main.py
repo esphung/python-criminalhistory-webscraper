@@ -2,7 +2,7 @@
 # @Author: eric phung
 # @Date:   2017-11-30 08:58:15
 # @Last Modified 2017-12-27
-# @Last Modified time: 2017-12-27 13:13:22
+# @Last Modified time: 2017-12-27 15:18:40
 
 from record import *
 from page import *
@@ -15,6 +15,8 @@ import datetime
 
 import os
 import math
+
+from subprocess import call
 
 inmate_search_url = 'http://inmateinfo.indy.gov/IML'
 
@@ -103,26 +105,29 @@ def console():
 	color_print('SUCCESS ', GREEN)
 	print('================================')
 
-	# PRINT HASHKEY
-	color_print('Hashkey: ', BLUE)
-	print(hashKey)
+	call(["prettyjson", file])
 
-	# PRINT FULL NAME
-	color_print('Name: ', BLUE)
-	print(record.fname + ' ' + record.lname)
+	# # PRINT HASHKEY
+	# color_print('Hashkey: ', BLUE)
+	# print(hashKey)
+
+	# # PRINT FULL NAME
+	# color_print('Name: ', BLUE)
+	# print(record.fname + ' ' + record.lname)
 
 
-	# print filename
-	color_print('File: ', BLUE)
-	print("{}".format(file))
+	# # print filename
+	# color_print('File: ', BLUE)
+	# print("{}".format(file))
 
-	# print contents
-	color_print('Data: ', CYAN)
-	pprint.pprint(readFile('data/{}_data.json'.format(hashKey)))
+	# # print contents
+	# color_print('Data: ', CYAN)
+	# pprint.pprint(readFile('data/{}_data.json'.format(hashKey)))
 
 	# print time
 	color_print('Time: ', BLUE)
 	print('{} seconds'.format(math.floor(getCurrentTime() - timer)))
+
 
 # iterate over all arguments
 if sys.argv[1] and sys.argv[2]:
@@ -169,4 +174,3 @@ while (keepGoing == True) ^ (timer < 1):
 	keepGoing = False
 
 	color_print('FINISHED\n', MAGENTA)
-
