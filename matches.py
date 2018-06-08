@@ -32,7 +32,7 @@ def getDataSet(data):
 
 		# match if date
 		if findValue(dates,data):
-			data_set['date'] = findValue(dates,data)
+			data_set['birthdate'] = findValue(dates,data)
 			data.remove(findValue(dates,data))
 
 		# match if permanent id
@@ -47,7 +47,7 @@ def getDataSet(data):
 
 		# match if date
 		if findValue(dates,data):
-			data_set['other_date'] = findValue(dates,data)
+			data_set['arrestdate'] = findValue(dates,data)
 			data.remove(findValue(dates,data))
 
 		return data_set
