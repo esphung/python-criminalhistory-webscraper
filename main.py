@@ -1,8 +1,13 @@
 # -*- coding: utf-8 -*-
 # @Author: eric phung
 # @Date:   2017-11-30 08:58:15
-# @Last Modified 2017-12-27
-# @Last Modified time: 2017-12-27 15:18:40
+# @Last Modified 2018-06-08
+# @Last Modified time: 2018-06-08 00:15:42
+
+
+from selenium import webdriver
+from selenium.webdriver.common.keys import Keys
+
 
 from record import *
 from page import *
@@ -107,40 +112,13 @@ def console():
 
 	call(["prettyjson", file])
 
-	# # PRINT HASHKEY
-	# color_print('Hashkey: ', BLUE)
-	# print(hashKey)
+keepGoing = True;
+fname = "John"
+lname = "Doe"
 
-	# # PRINT FULL NAME
-	# color_print('Name: ', BLUE)
-	# print(record.fname + ' ' + record.lname)
-
-
-	# # print filename
-	# color_print('File: ', BLUE)
-	# print("{}".format(file))
-
-	# # print contents
-	# color_print('Data: ', CYAN)
-	# pprint.pprint(readFile('data/{}_data.json'.format(hashKey)))
-
-	# print time
-	color_print('Time: ', BLUE)
-	print('{} seconds'.format(math.floor(getCurrentTime() - timer)))
-
-
-# iterate over all arguments
-if sys.argv[1] and sys.argv[2]:
-	fname = sys.argv[1]
-	lname = sys.argv[2]
-	print(getTime())
-	keepGoing = True
-	timer = getCurrentTime()
-else:
-	keepGoing == False
 
 #main loop
-while (keepGoing == True) ^ (timer < 1):
+while (keepGoing == True):
 
 	color_print('STARTING\n', YELLOW)
 
