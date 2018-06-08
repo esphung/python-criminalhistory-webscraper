@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 # @Author: eric phung
 # @Date:   2017-11-30 08:58:15
+<<<<<<< HEAD
 # @Last Modified 2018-06-08
 # @Last Modified time: 2018-06-08 00:15:42
 
@@ -8,6 +9,10 @@
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 
+=======
+# @Last Modified 2017-12-27
+# @Last Modified time: 2017-12-27 15:18:40
+>>>>>>> 6826b7dbfb03e01be4ad81c46264d613b215d5f2
 
 from record import *
 from page import *
@@ -111,11 +116,47 @@ def console():
 	print('================================')
 
 	call(["prettyjson", file])
+<<<<<<< HEAD
+=======
+
+	# # PRINT HASHKEY
+	# color_print('Hashkey: ', BLUE)
+	# print(hashKey)
+
+	# # PRINT FULL NAME
+	# color_print('Name: ', BLUE)
+	# print(record.fname + ' ' + record.lname)
+>>>>>>> 6826b7dbfb03e01be4ad81c46264d613b215d5f2
 
 keepGoing = True;
 fname = "John"
 lname = "Doe"
 
+<<<<<<< HEAD
+=======
+	# # print filename
+	# color_print('File: ', BLUE)
+	# print("{}".format(file))
+
+	# # print contents
+	# color_print('Data: ', CYAN)
+	# pprint.pprint(readFile('data/{}_data.json'.format(hashKey)))
+
+	# print time
+	color_print('Time: ', BLUE)
+	print('{} seconds'.format(math.floor(getCurrentTime() - timer)))
+
+
+# iterate over all arguments
+if sys.argv[1] and sys.argv[2]:
+	fname = sys.argv[1]
+	lname = sys.argv[2]
+	print(getTime())
+	keepGoing = True
+	timer = getCurrentTime()
+else:
+	keepGoing == False
+>>>>>>> 6826b7dbfb03e01be4ad81c46264d613b215d5f2
 
 #main loop
 while (keepGoing == True):
