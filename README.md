@@ -1,4 +1,4 @@
-Criminal History Scraper
+Criminal History Web Scraper
 ====
 
 >Scrapes criminal record from the Marion County public jail records using a first name and  last name that you must input either programmatically or as a user prompt.
